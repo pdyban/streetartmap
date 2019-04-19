@@ -6,6 +6,8 @@ tbd
 
 Forked from grishasergei/kyimurals.
 
+Tested with Python 2.7 and Python 3.5.
+
 # Set-up
 
 Init database and add defaults like the admin user and the languages
