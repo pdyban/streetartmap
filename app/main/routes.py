@@ -1,21 +1,23 @@
 from flask import render_template, abort, redirect, url_for, g, request
 from . import main
-from ..models import Mural, Artist
+from ..models import Mural, Artist, Language
 import random
 
 
 @main.route('/index')
 def index():
+    languages = Language.query.all()
     murals = Mural.query.all()
     mural_count = len(murals)
     artist_count = Artist.query.count()
     random_murals = random.sample(murals, min(len(murals), 4))
     return render_template('index.html',
-                           title='Kyivmural',
+                           title='Berlin Street Art',
                            murals=murals,
                            random_murals=random_murals,
                            mural_count=mural_count,
-                           artist_count=artist_count)
+                           artist_count=artist_count,
+                           languages=languages)
 
 
 @main.route('/mural/<int:mural_id>')

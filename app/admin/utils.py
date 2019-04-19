@@ -15,6 +15,9 @@ def get_address_from_coordinates(lat, lng, lang_code):
         return 'not available'
     except GeocoderUnavailable:
         return 'not available'
+    except Exception as e:
+        print('Unidentified exception occurred: {}'.format(str(e)))
+        return 'not available'
 
     try:
         road = location.raw['address']['road']

@@ -14,7 +14,7 @@ def import_from_csv(afile):
     if extension != '.csv':
         return False
     languages = Language.query.all()
-    reader = csv.reader(afile)
+    reader = csv.reader(open(afile.filename))
     for row in reader:
         parse_row(row, languages)
 
@@ -81,7 +81,7 @@ def create_photos(photos_string, copyright_string, mural_id):
         else:
             copyright_name = copyright_string
 
-    soup = BeautifulSoup(photos_string)
+    soup = BeautifulSoup(photos_string, "html.parser")
 
     for imgtag in soup.find_all('img'):
         filename = imgtag['src']

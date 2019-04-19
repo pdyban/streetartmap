@@ -100,10 +100,6 @@ def create_app(config_name='default'):
         return {'now': datetime.utcnow()}
 
     @app.context_processor
-    def inject_language_config():
-        return {'languages': app.config.get('LANGUAGES')}
-
-    @app.context_processor
     def inject_map_config():
         return {'map': {
             'lat': app.config.get('MAP_LATITUDE'),
@@ -116,8 +112,6 @@ def create_app(config_name='default'):
         return {'author': {
             'email': app.config.get('AUTHOR_EMAIL'),
             'name': app.config.get('AUTHOR_NAME'),
-            'copyright': app.config.get('AUTHOR_COPYRIGHT'),
-            'acknowledgement': app.config.get('AUTHOR_ACKNOWLEDGEMENT'),
         }}
 
     return app

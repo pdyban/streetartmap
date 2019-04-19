@@ -1,15 +1,15 @@
-from flask_wtf import Form
+from flask_wtf import FlaskForm
 from wtforms import StringField, FloatField, TextAreaField, SelectField, FileField
 from wtforms.validators import DataRequired, URL, Optional, NumberRange, Length
 
 
-class MuralPhotoForm(Form):
+class MuralPhotoForm(FlaskForm):
     filename = StringField()
     copyright_name = StringField()
     copyright_url = StringField(validators=[Optional(), URL()])
 
 
-class ImportCsvForm(Form):
+class ImportCsvForm(FlaskForm):
     csv_file = FileField(validators=[DataRequired()])
 
 
@@ -20,7 +20,7 @@ def artist_form(languages):
     :param languages: list of Language objects, available languages
     :return: instance of ArtistForm
     """
-    class ArtistForm(Form):
+    class ArtistForm(FlaskForm):
         name = StringField('name')
         nickname = StringField('nickname', validators=[DataRequired()])
         url = StringField('url', validators=[Optional(), URL()])
@@ -40,7 +40,7 @@ def mural_form(languages, artists):
     :param artists: list of Artist objects, available artists
     :return: instance of MuralForm
     """
-    class MuralForm(Form):
+    class MuralForm(FlaskForm):
         # coordinates
         lat = FloatField('Latitude', validators=[DataRequired(), NumberRange(min=-90, max=90)])
         lng = FloatField('Longitude', validators=[DataRequired(), NumberRange(min=-180, max=180)])

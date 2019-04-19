@@ -4,22 +4,25 @@ import os.path
 BASEDIR = os.path.abspath(os.path.dirname(__file__))
 
 
-class Config:
-    SECRET_KEY = os.environ.get('SECRET_KEY') or 'secret_key'
-    LOG_DIR = os.environ.get('LOG_DIR') or './'
-    SQLALCHEMY_MIGRATE_REPO = os.path.join(BASEDIR, 'db_repository')
-    WTF_CSRF_ENABLED = True
-    DEBUG = False
-    MURAL_IMG_FOLDER = os.path.join(BASEDIR, 'app', 'static', 'mural_img')
-    ALLOWED_EXTENSIONS = set(['jpg', 'jpeg', 'JPEG', 'png'])
-    MURALS_PER_PAGE = 9
-
+class CoreConfig:
     # language configuration
     LANGUAGES = [
         ('en', 'English'),
         ('de', 'Deutsch'),
     ]
     DEFAULT_LANG = 'en'
+
+
+class Config(CoreConfig):
+    SECRET_KEY = os.environ.get('SECRET_KEY') or 'secret_key'
+    LOG_DIR = os.environ.get('LOG_DIR') or './'
+    SQLALCHEMY_MIGRATE_REPO = os.path.join(BASEDIR, 'db_repository')
+    SQLALCHEMY_TRACK_MODIFICATIONS = False
+    WTF_CSRF_ENABLED = True
+    DEBUG = False
+    MURAL_IMG_FOLDER = os.path.join(BASEDIR, 'app', 'static', 'mural_img')
+    ALLOWED_EXTENSIONS = set(['jpg', 'jpeg', 'JPEG', 'png'])
+    MURALS_PER_PAGE = 9
 
     # map configuration for the homepage
     # Kiev
@@ -34,7 +37,6 @@ class Config:
     # author information
     AUTHOR_NAME = "Pavlo Dyban"
     AUTHOR_EMAIL = "info@streetartmap.berlin"
-    AUTHOR_COPYRIGHT = "2019 Creative Commons License. The art works are licensed to their respective owners."
 
     @staticmethod
     def init_app(app):

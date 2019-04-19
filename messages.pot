@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-04-19 14:48+0200\n"
+"POT-Creation-Date: 2019-04-19 20:54+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -23,7 +23,7 @@ msgstr ""
 
 #: app/templates/base.html:39 app/templates/main/about/about.html:20
 msgid "Project title"
-msgstr "Berlin Street Art Map"
+msgstr ""
 
 #: app/templates/base.html:44 app/templates/main/mural/all.html:11
 #: app/templates/main/mural/all.html:17
@@ -81,6 +81,10 @@ msgid ""
 "suggestions"
 msgstr ""
 
+#: app/templates/common/footer.html:6
+msgid "Author acknowledgement"
+msgstr ""
+
 #: app/templates/main/about/about.html:20
 msgid "Project description"
 msgstr ""
@@ -123,7 +127,7 @@ msgstr ""
 
 #: app/templates/main/about/about.html:42
 msgid "Contribution string"
-msgstr "Great! Start by forking kyivmurals on Github!"
+msgstr ""
 
 #: app/templates/main/about/about.html:45
 msgid "I am looking forward to hearing from you"

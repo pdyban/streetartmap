@@ -185,16 +185,13 @@ class Language(db.Model):
 
     @staticmethod
     def insert_languages():
-        languages = [
-            ('English', 'en'),
-            ('German',  'de')
-        ]
+        languages = Config.LANGUAGES
         for l in languages:
             lang = Language.query.get(l[1])
             if lang is None:
                 lang = Language()
-                lang.name = l[0]
-                lang.code = l[1]
+                lang.name = l[1]
+                lang.code = l[0]
                 db.session.add(lang)
                 db.session.commit()
 
@@ -263,8 +260,3 @@ class User(UserMixin, db.Model):
             u.password = password
             db.session.add(u)
             db.session.commit()
-
-
-
-
-

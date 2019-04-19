@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-04-19 14:48+0200\n"
+"POT-Creation-Date: 2019-04-19 20:54+0200\n"
 "PO-Revision-Date: 2019-04-19 14:40+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: de\n"
@@ -80,6 +80,10 @@ msgstr ""
 msgid ""
 "Discover four randomly selected artworks. Refresh the page to get new "
 "suggestions"
+msgstr ""
+
+#: app/templates/common/footer.html:6
+msgid "Author acknowledgement"
 msgstr ""
 
 #: app/templates/main/about/about.html:20
