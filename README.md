@@ -1,6 +1,10 @@
-# The Murals of Kyiv website
+# Street Art Map Berlin
 
-http://kyivmural.com
+tbd
+
+# Source
+
+Forked from grishasergei/kyimurals.
 
 # Set-up
 
