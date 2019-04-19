@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2016-12-03 11:50+0100\n"
+"POT-Creation-Date: 2019-04-19 14:48+0200\n"
 "PO-Revision-Date: 2016-10-30 18:46+0100\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: uk\n"
@@ -19,29 +19,29 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.3.4\n"
 
-#: app/models.py:103 app/models.py:106
+#: app/models.py:117
 msgid "photo"
 msgstr "фото"
 
-#: app/templates/base.html:27 app/templates/main/about/about.html:20
-msgid "Kyivmural"
-msgstr "Київмурал"
+#: app/templates/base.html:39 app/templates/main/about/about.html:20
+msgid "Project title"
+msgstr ""
 
-#: app/templates/base.html:32 app/templates/main/mural/all.html:11
+#: app/templates/base.html:44 app/templates/main/mural/all.html:11
 #: app/templates/main/mural/all.html:17
 msgid "Murals"
 msgstr "Мурали"
 
-#: app/templates/base.html:33 app/templates/main/artist/all.html:9
+#: app/templates/base.html:45 app/templates/main/artist/all.html:9
 #: app/templates/main/artist/all.html:15
 msgid "Artists"
 msgstr "Художники"
 
-#: app/templates/base.html:34 app/templates/main/about/about.html:14
+#: app/templates/base.html:46 app/templates/main/about/about.html:14
 msgid "About"
 msgstr "Про проект"
 
-#: app/templates/base.html:61 app/templates/main/mural/detail_view.html:136
+#: app/templates/base.html:75 app/templates/main/mural/detail_view.html:141
 msgid "Admin area"
 msgstr "Адміністраторська"
 
@@ -50,21 +50,16 @@ msgid "more"
 msgstr "детальніше"
 
 #: app/templates/index.html:53
-msgid "The Murals of Kyiv"
-msgstr "Мурали Києва"
-
-#: app/templates/index.html:55
-msgid "introduction_paragraph"
+msgid "Main text header"
 msgstr ""
-"Спостерігайте за тим, як у Києві з’являються нові мурали. Починаючи з "
-"2014 року художники з України, Іспанії, Аргентини, Австралії, Німеччини, "
-"Британії, Португалії та інших країн прикрасили муралами більше ста "
-"будинків та цей тренд продовжується. Мурали вже стали справжньою "
-"прикрасою Києва та мають всі шанси стати його новою візитною карткою"
 
 #: app/templates/index.html:55
-msgid "Kyivmural presents"
-msgstr "Наразі Київмурал налічує"
+msgid "Main paragraph"
+msgstr ""
+
+#: app/templates/index.html:55
+msgid "Project title presents"
+msgstr ""
 
 #: app/templates/index.html:55
 msgid "artworks"
@@ -89,10 +84,8 @@ msgid ""
 msgstr "До вашої уваги чотири випадково вибраних мурали"
 
 #: app/templates/main/about/about.html:20
-msgid "kyivmural_definition"
+msgid "Project description"
 msgstr ""
-"— каталог київських муралів. Це спроба зібрати в одному місці інформацію "
-"про стінописи у Києві: їх історію, місцезнаходження та авторів"
 
 #: app/templates/main/about/about.html:23
 msgid "contact_me_paragraph_1"
@@ -136,61 +129,53 @@ msgid "Wikipedia"
 msgstr "Вікіпедія"
 
 #: app/templates/main/about/about.html:40
-msgid ""
-"I am looking for an artist to commission a wall mural. Can you recommend "
-"someone?"
-msgstr "Ми шукаємо художника. Ви можете порекомендувати когось?"
-
-#: app/templates/main/about/about.html:42
-msgid ""
-"Unfortunately I do not have any suggestions because there are no artists "
-"in my personal network"
-msgstr ""
-"Ні, на жаль я не можу нікого порекомендувати, тому що не маю жодного "
-"художника серед своїх знайомих"
-
-#: app/templates/main/about/about.html:46
-msgid "I am an artist and I would like to paint a wall mural"
-msgstr "Я художник та хочу намалювати мурал"
-
-#: app/templates/main/about/about.html:48
-msgid ""
-"From time to time I receive requests for a referral, so there is some "
-"demand for artists. I suggest that you to promote yourself more so your "
-"potential customers can reach you"
-msgstr ""
-"З огляду на те, що мені періодично надходять листи з проханням "
-"порекомендувати когось, на це є попит. Варто зробити так, щоби потенційні"
-" замовники змогли вас знайти"
-
-#: app/templates/main/about/about.html:52
 msgid "I would like to contribute"
 msgstr "Я хочу долучитися до проекту"
 
-#: app/templates/main/about/about.html:54
-msgid ""
-"Great! If you are a web developer, then start with forking Kyivmural on "
-"GitHub"
+#: app/templates/main/about/about.html:42
+msgid "Contribution string"
 msgstr ""
-"Це добре. Якщо вас цікавить розробка сайту, то почніть з ознайомлення з "
-"кодом"
 
-#: app/templates/main/about/about.html:56
-msgid "I am looking forward to hear from you"
-msgstr "Після ознайомлення та з приводу всіх інших питань пишіть на"
+#: app/templates/main/about/about.html:45
+msgid "I am looking forward to hearing from you"
+msgstr ""
 
-#: app/templates/main/mural/detail_view.html:88
+#: app/templates/main/mural/detail_view.html:93
 msgid "Location"
 msgstr "Місцезнаходження"
 
-#: app/templates/main/mural/detail_view.html:107
+#: app/templates/main/mural/detail_view.html:112
 msgid "Artist"
 msgstr "Художник"
 
-#: app/templates/main/mural/detail_view.html:119
+#: app/templates/main/mural/detail_view.html:124
 msgid "Be social"
 msgstr "Поділися з друзями"
 
 #~ msgid "Share"
 #~ msgstr ""
+
+#~ msgid ""
+#~ msgstr ""
+
+#~ msgid "I am an artist and I would like to paint a wall mural"
+#~ msgstr "Я художник та хочу намалювати мурал"
+
+#~ msgid "Kyivmural"
+#~ msgstr "Київмурал"
+
+#~ msgid "The Murals of Kyiv"
+#~ msgstr "Мурали Києва"
+
+#~ msgid "introduction_paragraph"
+#~ msgstr ""
+
+#~ msgid "Kyivmural presents"
+#~ msgstr "Наразі Київмурал налічує"
+
+#~ msgid "kyivmural_definition"
+#~ msgstr ""
+
+#~ msgid "I am looking forward to hear from you"
+#~ msgstr "Після ознайомлення та з приводу всіх інших питань пишіть на"
 

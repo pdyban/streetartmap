@@ -31,6 +31,11 @@ class Config:
     MAP_LONGITUDE = 13.3839094
     MAP_ZOOM = 13.67
 
+    # author information
+    AUTHOR_NAME = "Pavlo Dyban"
+    AUTHOR_EMAIL = "info@streetartmap.berlin"
+    AUTHOR_COPYRIGHT = "2019 Creative Commons License. The art works are licensed to their respective owners."
+
     @staticmethod
     def init_app(app):
         pass

@@ -17,10 +17,10 @@
 {%  block content %}
     <div class="container">
         <p class="lead">
-            <strong>{{ _('Kyivmural') }}</strong> {{ _("kyivmural_definition") }}.
+            <strong>{{ _('Project title') }}</strong> {{ _("Project description") }}.
         </p>
         <p class="lead">
-            {{ _("contact_me_paragraph_1") }} <a href="mailto:#">sergii@sergii.se</a>.
+            {{ _("contact_me_paragraph_1") }} <a href="mailto:#">{{ author.email }}</a>.
             {{ _("contact_me_paragraph_2") }}
         </p>
         <p class="lead">
@@ -39,9 +39,10 @@
             <span class="question">
                 {{ _("I would like to contribute") }}.
             </span><br>
-            {{ _("Great! If you are a web developer, then start with forking Kyivmural on GitHub") }}
+            {{ _("Contribution string") }}
+            {{ author.acknowledgment }}
             <a href="https://github.com/grishasergei/kyivmural" class="btn btn-default btn-xs" role="button"><strong>Kyivmural on GitHub</strong></a>.
-            {{ _("I am looking forward to hear from you") }} <a href="mailto:#">sergii@sergii.se</a>
+            {{ _("I am looking forward to hearing from you") }} <a href="mailto:#">{{ author.email }}</a>
         </p>
     </div>
 {% endblock %}
