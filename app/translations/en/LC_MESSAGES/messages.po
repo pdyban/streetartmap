@@ -40,6 +40,10 @@ msgstr ""
 msgid "About"
 msgstr ""
 
+#: app/templates/base.html:51 ????
+msgid "LanguageDescriptionString"
+msgstr ""
+
 #: app/templates/base.html:61 app/templates/main/mural/detail_view.html:136
 msgid "Admin area"
 msgstr ""

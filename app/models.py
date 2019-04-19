@@ -39,7 +39,7 @@ class Mural(db.Model):
                 return t
         return None
 
-    def get_address(self, lang_code='uk'):
+    def get_address(self, lang_code='en'):
         for t in self.translations:
             if t.language_code == lang_code:
                 return t.address
@@ -187,7 +187,7 @@ class Language(db.Model):
     def insert_languages():
         languages = [
             ('English', 'en'),
-            ('Ukrainian', 'uk')
+            ('German',  'de')
         ]
         for l in languages:
             lang = Language.query.get(l[1])

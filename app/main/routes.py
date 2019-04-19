@@ -1,7 +1,6 @@
 from flask import render_template, abort, redirect, url_for, g, request
 from . import main
 from ..models import Mural, Artist
-from .. import config
 import random
 
 

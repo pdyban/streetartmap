@@ -17,6 +17,7 @@ class Config:
         'en': 'English',
         'de': 'German'
     }
+    DEFAULT_LANG = 'en'
 
     @staticmethod
     def init_app(app):

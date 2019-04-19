@@ -46,13 +46,15 @@
                     <li><a href="{{ url_for('main.about') }}">{{ _('About') }}</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        {% if get_locale()=='uk' %}
-                            <a href="{{ request.path|replace("/"+get_locale()+"/", "/en/") }}">in English</a>
-                        {%  else %}
-                            <a href="{{ request.path|replace("/"+get_locale()+"/", "/uk/") }}">українською</a>
-                        {%  endif %}
-                    </li>
+                    {% for language in languages %}
+                        <li>
+                            {% if language[0] != get_locale() %}
+                            <a href="{{ request.path|replace("/" + get_locale() + "/", "/" + language[0]+ "/") }}">
+                                {{ language[1] }}
+                            </a>
+                            {% endif %}
+                        </li>
+                    {% endfor %}
                 </ul>
             </div>
         </div>

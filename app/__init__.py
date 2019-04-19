@@ -1,5 +1,4 @@
-from flask import Flask, request, g, abort, render_template, redirect, url_for
-from flask import url_for as flask_url_for
+from flask import Flask, request, g, render_template, redirect, url_for
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager
 from config import config
@@ -12,7 +11,7 @@ from datetime import datetime
 from werkzeug.contrib.fixers import ProxyFix
 
 
-# push application context when working from termial
+# push application context when working from terminal
 # http://stackoverflow.com/questions/19437883/when-scattering-flask-models-runtimeerror-application-not-registered-on-db-w
 # create_app().app_context().push()
 
@@ -34,8 +33,8 @@ login_manager.login_view = 'auth.login'
 
 
 @babel.localeselector
-def get_locale():
-    return g.get('current_lang', 'uk')
+def get_locale(default='en'):
+    return g.get('current_lang', default)
 
 
 def create_app(config_name='default'):
@@ -49,7 +48,7 @@ def create_app(config_name='default'):
 
     # set up Babel
     babel.init_app(app)
-    app.jinja_env.globals.update(get_locale=get_locale)
+    app.jinja_env.globals.update(get_locale=lambda: get_locale(default=app.config['DEFAULT_LANG']))
 
     db.init_app(app)
 
@@ -73,7 +72,7 @@ def create_app(config_name='default'):
 
     @app.route('/')
     def index():
-        return redirect(url_for('main.index', lang_code=g.get('current_lang', 'uk')))
+        return redirect(url_for('main.index', lang_code=g.get('current_lang', app.config['DEFAULT_LANG'])))
 
     @app.errorhandler(404)
     def page_not_found(e):
@@ -100,18 +99,11 @@ def create_app(config_name='default'):
     def inject_now():
         return {'now': datetime.utcnow()}
 
+    @app.context_processor
+    def inject_list_of_languages():
+        return {'languages': [
+            ('en', 'English'),
+            ('de', 'Deutsch')
+        ]}
+
     return app
-
-
-"""
-app = Flask(__name__)
-app.config.from_object('config')
-
-db = SQLAlchemy(app)
-
-login_manager = LoginManager()
-login_manager.init_app(app)
-
-from app import models
-from app.main import views
-"""
