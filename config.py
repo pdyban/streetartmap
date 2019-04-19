@@ -13,11 +13,23 @@ class Config:
     MURAL_IMG_FOLDER = os.path.join(BASEDIR, 'app', 'static', 'mural_img')
     ALLOWED_EXTENSIONS = set(['jpg', 'jpeg', 'JPEG', 'png'])
     MURALS_PER_PAGE = 9
-    LANGUAGES = {
-        'en': 'English',
-        'de': 'German'
-    }
+
+    # language configuration
+    LANGUAGES = [
+        ('en', 'English'),
+        ('de', 'Deutsch'),
+    ]
     DEFAULT_LANG = 'en'
+
+    # map configuration for the homepage
+    # Kiev
+    # MAP_LATITUDE = 50.450487
+    # MAP_LONGITUDE = 30.519516
+    # MAP_ZOOM = 12
+    # Berlin
+    MAP_LATITUDE = 52.5177291
+    MAP_LONGITUDE = 13.3839094
+    MAP_ZOOM = 13.67
 
     @staticmethod
     def init_app(app):

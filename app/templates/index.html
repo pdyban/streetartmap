@@ -13,9 +13,9 @@
     <script>
         var map = new GMaps({
             el: '#map',
-            lat: 50.450487,
-            lng: 30.519516,
-            zoom: 12
+            lat: {{ map['lat'] }},
+            lng: {{ map['lng'] }},
+            zoom: {{ map['zoom'] }}
         });
 
         {% for mural in murals %}

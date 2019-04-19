@@ -101,9 +101,14 @@ def create_app(config_name='default'):
 
     @app.context_processor
     def inject_list_of_languages():
-        return {'languages': [
-            ('en', 'English'),
-            ('de', 'Deutsch')
-        ]}
+        return {'languages': app.config.get('LANGUAGES')}
+
+    @app.context_processor
+    def inject_map_config():
+        return {'map': {
+            'lat': app.config.get('MAP_LATITUDE'),
+            'lng': app.config.get('MAP_LONGITUDE'),
+            'zoom': app.config.get('MAP_ZOOM'),
+        }}
 
     return app
