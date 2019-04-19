@@ -4,8 +4,8 @@ from flask_login import login_required
 from ..models import Mural, Language, Artist, ArtistTranslation, MuralPhoto, MuralTranslation
 from .forms import artist_form, mural_form, MuralPhotoForm, ImportCsvForm
 from .. import db
-from utils import save_mural_from_form
-from import_from_csv import import_from_csv
+from .utils import save_mural_from_form
+from .import_from_csv import import_from_csv
 import sys
 
 # Murals

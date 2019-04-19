@@ -5,7 +5,7 @@ from . import login_manager
 import os
 from config import Config
 from flask import Markup
-from urlparse import urlparse
+from urllib.parse import urlparse
 from flask_babel import gettext
 
 

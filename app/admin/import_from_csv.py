@@ -3,9 +3,9 @@ from .. import db
 from ..models import Mural, Language, Artist, ArtistTranslation, MuralPhoto, MuralTranslation
 import os
 import csv
-from urlparse import urlparse
+from urllib.parse import urlparse
 from bs4 import BeautifulSoup
-from utils import get_address_from_coordinates
+from .utils import get_address_from_coordinates
 
 
 def import_from_csv(afile):
@@ -44,7 +44,7 @@ def parse_row(row, languages):
     :param row:
     :return:
     """
-    print 'parsing mural id {0}'.format(row[0])
+    print('parsing mural id {0}'.format(row[0]))
     # artist
     artist_name = row[6]
     artist = get_artist(artist_name)

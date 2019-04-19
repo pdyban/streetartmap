@@ -28,7 +28,7 @@ def get_address_from_coordinates(lat, lng, lang_code):
     except KeyError:
         house_number = ''
 
-    return u'{} {}'.format(unicode(road), house_number)
+    return '{} {}'.format(str(road), house_number)
 
 
 def allowed_file(filename):
