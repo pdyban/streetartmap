@@ -32,7 +32,7 @@ class Config(CoreConfig):
     # Berlin
     MAP_LATITUDE = 52.5177291
     MAP_LONGITUDE = 13.3839094
-    MAP_ZOOM = 13.67
+    MAP_ZOOM = 13
 
     # author information
     AUTHOR_NAME = "Pavlo Dyban"
