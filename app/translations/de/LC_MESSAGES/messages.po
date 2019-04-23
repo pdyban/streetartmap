@@ -50,31 +50,31 @@ msgstr "mehr"
 
 #: app/templates/index.html:53
 msgid "Main text header"
-msgstr ""
+msgstr "Willkommen zur vollständigen Berlin Street Art Map!"
 
 #: app/templates/index.html:55
 msgid "Main paragraph"
-msgstr ""
+msgstr "Hier finden Sie alle Kunstwerke Berlins auf einen Mausklick."
 
 #: app/templates/index.html:55
 msgid "Berlin Street Art Map presents"
-msgstr ""
+msgstr "Berlin Street Art Map präsentiert"
 
 #: app/templates/index.html:55
 msgid "artworks"
-msgstr ""
+msgstr "Kunstwerke"
 
 #: app/templates/index.html:55
 msgid "and"
-msgstr ""
+msgstr "und"
 
 #: app/templates/index.html:55
 msgid "artists"
-msgstr ""
+msgstr "Künstler"
 
 #: app/templates/index.html:60
 msgid "Discover"
-msgstr ""
+msgstr "Entdecke"
 
 #: app/templates/index.html:62
 msgid ""
@@ -85,21 +85,21 @@ msgstr "Entdecke vier zufällige Werke. Lade die Seite neu für neue Vorschläge
 #: app/templates/common/footer.html:8
 msgid ""
 "This web site is licensed under a Creative Commons Attribution 4.0 "
-"International License. The photos and the art works are subject to the "
+"International License. The art works and their photographs are subject to the "
 "license conditions of their respective owners."
 msgstr ""
 "Diese Seite ist unter Creative Commons"
 " Attribution 4.0 International License "
-"lizensiertDie Bilder und Werke unterliegen "
+"lizensiert. Die Werke und ihre Abbildungen unterliegen "
 "den Lizenzbedingungen ihrer jeweiligen Autoren."
 
 #: app/templates/common/footer.html:10
 msgid "Powered by"
-msgstr ""
+msgstr "Betrieben durch"
 
 #: app/templates/main/about/about.html:20
 msgid "Project title"
-msgstr "Berlin Straßenkunstkarte"
+msgstr "Berlin Street Art Map"
 
 #: app/templates/main/about/about.html:20
 msgid "Project description"
