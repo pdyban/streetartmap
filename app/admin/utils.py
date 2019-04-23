@@ -5,6 +5,7 @@ from .. import db
 from ..models import Mural, Language, Artist, ArtistTranslation, MuralPhoto, MuralTranslation
 from geopy.geocoders import Nominatim
 from geopy.exc import GeocoderTimedOut, GeocoderUnavailable
+import uuid
 
 
 def get_address_from_coordinates(lat, lng, lang_code):
@@ -103,6 +104,8 @@ def save_mural_from_form(mural, form, languages):
     # photos
     files = request.files.getlist("photo_files")
     new_name = form.photo_rename_to.data
+    if not new_name:
+        new_name = uuid.uuid4().hex
     for i, file in enumerate(files):
         was_saved, filename = save_file(file, '{}_{}'.format(new_name, i))
         if was_saved:
