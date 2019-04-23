@@ -54,7 +54,7 @@ msgstr "Willkommen zur vollständigen Berlin Street Art Map!"
 
 #: app/templates/index.html:55
 msgid "Main paragraph"
-msgstr "Hier finden Sie alle Kunstwerke Berlins auf einen Mausklick."
+msgstr "Hier finden Sie alle Kunstwerke Berlins auf einen Mausklick"
 
 #: app/templates/index.html:55
 msgid "Berlin Street Art Map presents"
@@ -119,7 +119,7 @@ msgstr ""
 
 #: app/templates/main/about/about.html:30
 msgid "FAQ"
-msgstr ""
+msgstr "Fragen und Antworten"
 
 #: app/templates/main/about/about.html:34
 msgid "What is a mural?"
@@ -147,56 +147,16 @@ msgstr ""
 
 #: app/templates/main/about/about.html:45
 msgid "I am looking forward to hearing from you"
-msgstr ""
+msgstr "Ich freue mich auf deine Mail"
 
 #: app/templates/main/mural/detail_view.html:93
 msgid "Location"
-msgstr ""
+msgstr "Ort"
 
 #: app/templates/main/mural/detail_view.html:112
 msgid "Artist"
-msgstr ""
+msgstr "Künstler"
 
 #: app/templates/main/mural/detail_view.html:124
 msgid "Be social"
 msgstr ""
-
-#~ msgid "Kyivmural"
-#~ msgstr ""
-
-#~ msgid "The Murals of Kyiv"
-#~ msgstr ""
-
-#~ msgid "introduction_paragraph"
-#~ msgstr ""
-
-#~ msgid "Kyivmural presents"
-#~ msgstr ""
-
-#~ msgid "kyivmural_definition"
-#~ msgstr ""
-
-#~ msgid ""
-#~ msgstr ""
-
-#~ msgid "I am looking forward to hear from you"
-#~ msgstr ""
-
-#~ msgid "Project title presents"
-#~ msgstr ""
-
-#~ msgid "Author acknowledgement"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "his web site is licensed under a"
-#~ " Creative Commons Attribution 4.0 "
-#~ "International License. The art works are"
-#~ " subject to the license conditions of"
-#~ " their respective owners."
-#~ msgstr ""
-#~ "Diese Seite ist unter Creative Commons"
-#~ " Attribution 4.0 International License "
-#~ "lizensiertDie Bilder und Werke unterliegen "
-#~ "den Lizenzbedingungen ihrer jeweiligen Autoren"
-
