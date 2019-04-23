@@ -109,10 +109,13 @@ def save_mural_from_form(mural, form, languages):
     for i, file in enumerate(files):
         was_saved, filename = save_file(file, '{}_{}'.format(new_name, i))
         if was_saved:
+            print('Uploaded {} to {}'.format(file, new_name))
             photo = MuralPhoto()
             photo.file_name = filename
             photo.copyright_name = form.photo_copyright_name.data
             photo.copyright_url = form.photo_copyright_url.data
             photo.mural_id = mural.id
             db.session.add(photo)
+        else:
+            print("Could not upload {} to {}".format(file, new_name))
     db.session.commit()

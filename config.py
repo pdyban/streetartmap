@@ -21,7 +21,7 @@ class Config(CoreConfig):
     WTF_CSRF_ENABLED = True
     DEBUG = False
     MURAL_IMG_FOLDER = os.path.join(BASEDIR, 'app', 'static', 'mural_img')
-    ALLOWED_EXTENSIONS = set(['jpg', 'jpeg', 'JPEG', 'png'])
+    ALLOWED_EXTENSIONS = set(['jpg', 'jpeg', 'JPEG', 'JPG', 'png'])
     MURALS_PER_PAGE = 9
 
     # map configuration for the homepage
